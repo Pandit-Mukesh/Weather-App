@@ -13,7 +13,7 @@ const replaceVal = (tempVal,realVal)=>{
     return temperature;
 }
 const server = http.createServer((req,res)=>{
-    if(req.url =="/"){
+    if(req.url =="/index"){
         requests('https://api.openweathermap.org/data/2.5/weather?q=Pune&appid=df2ab09d35467adee6d501d21c4a0702')
         .on('data', (chunk) => {
             const objdata = JSON.parse(chunk)
